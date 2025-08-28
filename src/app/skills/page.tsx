@@ -29,6 +29,7 @@ import {
   SiPostgresql,
   SiGit,
   SiGithub,
+  SiCplusplus,
 } from 'react-icons/si';
 import { TbApi, TbMessageChatbot, TbTestPipe } from 'react-icons/tb';
 import { CiCircleCheck } from 'react-icons/ci';
@@ -76,7 +77,7 @@ const SECTIONS = [
     gradient: 'from-green-500/10 to-emerald-600/10',
     borderGradient: 'from-green-500 to-emerald-600',
     items: [
-      { name: 'C++', level: 85, icon: <SiTypescript className="text-blue-500" /> },
+      { name: 'C++', level: 85, icon: <SiCplusplus className="text-blue-500" /> },
       { name: 'Python', level: 80, icon: <FaPython className="text-yellow-500" /> },
       { name: 'JavaScript', level: 90, icon: <FaJsSquare className="text-yellow-400" /> },
     ],
