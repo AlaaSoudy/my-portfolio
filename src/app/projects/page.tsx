@@ -24,6 +24,7 @@ export default function ProjectsPage() {
       // image: "/projects/ecommerce.png",
       videoEmbed:
         'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7360584968760102912?compact=1',
+        image: '',
       github: 'https://github.com/AlaaSoudy/Fresh-Cart-App.git',
       live: 'https://alaasoudy.github.io/Fresh-Cart-App/',
       technologies: ['Next.js', 'Tailwind CSS', 'React', 'Stripe'],
@@ -35,6 +36,7 @@ export default function ProjectsPage() {
         'A simple responsive bakery website built with HTML and CSS, showcasing products and design layout.',
       videoEmbed:
         'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7222640931944988672?compact=1',
+        image: '',
       github: 'https://github.com/AlaaSoudy/Bakery.git',
       live: 'https://alaaSoudy.github.io/Bakery',
       technologies: ['HTML', 'CSS'],
@@ -46,6 +48,7 @@ export default function ProjectsPage() {
         'A responsive personal portfolio website built with HTML, CSS, and JavaScript, designed to showcase profile, skills, and projects.',
       videoEmbed:
         'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7227085168145031169?compact=1',
+        image: '',
       github: 'https://github.com/AlaaSoudy/Fokir',
       live: 'https://alaaSoudy.github.io/Fokir',
       technologies: ['HTML', 'CSS', 'JavaScript'],
