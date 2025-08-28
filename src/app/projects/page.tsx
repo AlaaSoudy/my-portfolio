@@ -7,15 +7,15 @@ import Image from 'next/image';
 
 export default function ProjectsPage() {
   const projects = [
-    {
-      name: 'Portfolio Website',
-      description:
-        'A personal portfolio website built with Next.js, Tailwind, and React to showcase my skills and projects.',
-      image: '/projects/portfolio.png',
-      github: 'https://github.com/AlaaSoudy/portfolio',
-      live: '/',
-      technologies: ['Next.js', 'Tailwind CSS', 'React', 'TypeScript'],
-    },
+    // {
+    //   name: 'Portfolio Website',
+    //   description:
+    //     'A personal portfolio website built with Next.js, Tailwind, and React to showcase my skills and projects.',
+    //   image: '/projects/portfolio.png',
+    //   github: 'https://github.com/AlaaSoudy/portfolio',
+    //   live: '/',
+    //   technologies: ['Next.js', 'Tailwind CSS', 'React', 'TypeScript'],
+    // },
 
     {
       name: 'E-commerce App',
