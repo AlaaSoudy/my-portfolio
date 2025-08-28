@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
@@ -11,23 +11,18 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export default function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
-    // التحقق من التفضيلات المحفوظة أو تفضيلات النظام
     const savedTheme = localStorage.getItem('theme') as Theme;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches 
-      ? 'dark' : 'light';
-    
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+
     const initialTheme = savedTheme || systemTheme;
     setTheme(initialTheme);
-    
-    // تطبيق السمة على عنصر HTML
+
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');
   }, []);
 
@@ -38,11 +33,7 @@ export default function ThemeProvider({
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {

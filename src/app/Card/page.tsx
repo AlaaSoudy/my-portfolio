@@ -1,32 +1,37 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaHeart, FaCode, FaBrain } from "react-icons/fa";
-import Link from "next/link";
-import { motion } from "framer-motion";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaDownload,
+  FaHeart,
+  FaCode,
+  FaBrain,
+} from 'react-icons/fa';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Card() {
   return (
     <div className="flex justify-center items-center min-h-screen px-4 py-8 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 ">
-      {/* Background effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
-      
+
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
         className="relative max-w-md w-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-xl rounded-2xl p-6 flex flex-col items-center gap-5 border border-white/20 dark:border-gray-700/30"
       >
-        {/* Light effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent dark:from-white/5 rounded-2xl pointer-events-none"></div>
-        
-        {/* Profile image */}
+
         <motion.div
           whileHover={{ scale: 1.05, rotate: 2 }}
-          transition={{ type: "spring", stiffness: 300 }}
+          transition={{ type: 'spring', stiffness: 300 }}
           className="relative w-32 h-32 group"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -41,7 +46,7 @@ export default function Card() {
               />
             </div>
           </div>
-          <motion.div 
+          <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5 }}
@@ -51,9 +56,8 @@ export default function Card() {
           </motion.div>
         </motion.div>
 
-        {/* Information */}
         <div className="text-center space-y-2">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -61,35 +65,39 @@ export default function Card() {
           >
             Hi, I&apos;m Alaa 👋
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-sm text-gray-700 dark:text-gray-400 flex flex-col items-center gap-1 mt-2"
           >
-            <span className="flex items-center gap-1"><FaCode className="text-[#6B76DD]" /> ECE Student</span>
-            <span className="flex items-center gap-1"><FaCode className="text-[#6B76DD]" /> Front-End Developer</span>
-            <span className="flex items-center gap-1"><FaBrain className="text-[#6B76DD]" /> AI & ML Explorer</span>
+            <span className="flex items-center gap-1">
+              <FaCode className="text-[#6B76DD]" /> ECE Student
+            </span>
+            <span className="flex items-center gap-1">
+              <FaCode className="text-[#6B76DD]" /> Front-End Developer
+            </span>
+            <span className="flex items-center gap-1">
+              <FaBrain className="text-[#6B76DD]" /> AI & ML Explorer
+            </span>
           </motion.div>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="mt-3 text-gray-700 dark:text-gray-300 text-center text-sm leading-relaxed"
           >
-            I love building modern, responsive, and user-friendly web apps.
-            Currently focusing on{" "}
-            <span className="font-semibold text-[#6B76DD]">Next.js</span>,{" "}
-            <span className="font-semibold text-[#6B76DD]">Tailwind</span>,{" "}
-            <span className="font-semibold text-[#6B76DD]">Bootstrap</span>, and{" "}
+            I love building modern, responsive, and user-friendly web apps. Currently focusing on{' '}
+            <span className="font-semibold text-[#6B76DD]">Next.js</span>,{' '}
+            <span className="font-semibold text-[#6B76DD]">Tailwind</span>,{' '}
+            <span className="font-semibold text-[#6B76DD]">Bootstrap</span>, and{' '}
             <span className="font-semibold text-[#6B76DD]">TypeScript</span>.
           </motion.p>
         </div>
 
-        {/* Buttons */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -126,8 +134,7 @@ export default function Card() {
           </div>
         </motion.div>
 
-        {/* Social media */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
@@ -157,37 +164,28 @@ export default function Card() {
             <FaLinkedin />
           </motion.a>
 
+          <motion.a
+            whileHover={{ y: -3, scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={(e) => {
+              e.preventDefault();
+              const gmailLink =
+                'https://mail.google.com/mail/?view=cm&fs=1&to=alaasoudy251@gmail.com';
+              const mailtoLink = 'mailto:alaasoudy251@gmail.com';
 
-
-         <motion.a
-  whileHover={{ y: -3, scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  onClick={(e) => {
-    e.preventDefault();
-    const gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=alaasoudy251@gmail.com";
-    const mailtoLink = "mailto:alaasoudy251@gmail.com";
-
-    // نحاول نفتح Gmail
-    const win = window.open(gmailLink, "_blank");
-    if (!win || win.closed || typeof win.closed === "undefined") {
-      // fallback للـ mailto
-      window.location.href = mailtoLink;
-    }
-  }}
-  href="mailto:alaasoudy251@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300 shadow-md"
-  aria-label="Email"
->
-  <FaEnvelope className="text-lg" />
-</motion.a>
-
-
-
-
-
-
+              const win = window.open(gmailLink, '_blank');
+              if (!win || win.closed || typeof win.closed === 'undefined') {
+                window.location.href = mailtoLink;
+              }
+            }}
+            href="mailto:alaasoudy251@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300 shadow-md"
+            aria-label="Email"
+          >
+            <FaEnvelope className="text-lg" />
+          </motion.a>
         </motion.div>
       </motion.div>
     </div>
